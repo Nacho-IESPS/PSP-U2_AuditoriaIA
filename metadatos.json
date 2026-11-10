@@ -1,0 +1,292 @@
+[
+  {
+    "n": 1,
+    "title": "El hilo fantasma",
+    "topic": "1.1 Thread, run(), start()",
+    "expected": "El trabajo se ejecuta fuera del hilo main; el nombre mostrado no debe ser main.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c01/Caso01.java",
+    "main": "psp.ud2.c01.Caso01"
+  },
+  {
+    "n": 2,
+    "title": "Dos tareas, un solo hilo",
+    "topic": "1.2 Runnable, lambda",
+    "expected": "Las dos tareas se ejecutan en hilos de trabajo diferentes de main.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c02/Caso02.java",
+    "main": "psp.ud2.c02.Caso02"
+  },
+  {
+    "n": 3,
+    "title": "Cancelar no es detener a la fuerza",
+    "topic": "2.1 interrupt(), isInterrupted()",
+    "expected": "Tras la solicitud de cancelación, el cálculo se detiene sin completar todo el trabajo.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c03/Caso03.java",
+    "main": "psp.ud2.c03.Caso03"
+  },
+  {
+    "n": 4,
+    "title": "La cancelación olvidada",
+    "topic": "2.2 InterruptedException",
+    "expected": "Tras la interrupción durante sleep(), la tarea no continúa el procesamiento normal.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c04/Caso04.java",
+    "main": "psp.ud2.c04.Caso04"
+  },
+  {
+    "n": 5,
+    "title": "Operación cancelada que dice OK",
+    "topic": "2.3 throw, throws, propagar",
+    "expected": "La operación no informa éxito si una espera ha sido interrumpida.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c05/Caso05.java",
+    "main": "psp.ud2.c05.Caso05"
+  },
+  {
+    "n": 6,
+    "title": "Un cronómetro que engaña",
+    "topic": "2.4 nanoTime() y join()",
+    "expected": "La duración incluye el tiempo real de trabajo (aproximadamente 200 ms).",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c06/Caso06.java",
+    "main": "psp.ud2.c06.Caso06"
+  },
+  {
+    "n": 7,
+    "title": "Contador que pierde pedidos",
+    "topic": "3.1 race condition, ++",
+    "expected": "El total debe ser exactamente 800.000.",
+    "kind": "Intermitente",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c07/Caso07.java",
+    "main": "psp.ud2.c07.Caso07"
+  },
+  {
+    "n": 8,
+    "title": "Pedido congelado que cambia",
+    "topic": "3.2 record e inmutabilidad",
+    "expected": "El pedido debe conservar solo el producto inicial.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c08/Caso08.java",
+    "main": "psp.ud2.c08.Caso08"
+  },
+  {
+    "n": 9,
+    "title": "El letrero invisible",
+    "topic": "3.3 visibilidad, volatile",
+    "expected": "El trabajador debe ver la orden de cierre y terminar dentro del plazo.",
+    "kind": "Intermitente / dependiente de JVM",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c09/Caso09.java",
+    "main": "psp.ud2.c09.Caso09"
+  },
+  {
+    "n": 10,
+    "title": "Volatile no vuelve atómico el contador",
+    "topic": "3.3 volatile frente a atomicidad",
+    "expected": "El contador termina en 600.000 sin perder unidades.",
+    "kind": "Intermitente",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c10/Caso10.java",
+    "main": "psp.ud2.c10.Caso10"
+  },
+  {
+    "n": 11,
+    "title": "AtomicInteger con una operación no atómica",
+    "topic": "3.4 AtomicInteger",
+    "expected": "El contador total debe ser 400.000.",
+    "kind": "Intermitente",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c11/Caso11.java",
+    "main": "psp.ud2.c11.Caso11"
+  },
+  {
+    "n": 12,
+    "title": "Saldo bancario negativo",
+    "topic": "3.4 CAS y operaciones condicionales",
+    "expected": "Desde un saldo de 50 no deben aprobarse más de 5 retiradas de 10 ni quedar saldo negativo.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c12/Caso12.java",
+    "main": "psp.ud2.c12.Caso12"
+  },
+  {
+    "n": 13,
+    "title": "Estadísticas usadas como semáforo",
+    "topic": "3.5 LongAdder y contención",
+    "expected": "Nunca deben admitirse más de 10 usuarios.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c13/Caso13.java",
+    "main": "psp.ud2.c13.Caso13"
+  },
+  {
+    "n": 14,
+    "title": "La cerradura que no protege",
+    "topic": "4.1 synchronized y monitor compartido",
+    "expected": "El inventario aumenta exactamente 500.000 unidades.",
+    "kind": "Intermitente",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c14/Caso14.java",
+    "main": "psp.ud2.c14.Caso14"
+  },
+  {
+    "n": 15,
+    "title": "Una transferencia partida",
+    "topic": "4.1 sección crítica e invariantes",
+    "expected": "En cualquier instante observado, la suma de las dos cuentas es 200.",
+    "kind": "Intermitente",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c15/Caso15.java",
+    "main": "psp.ud2.c15.Caso15"
+  },
+  {
+    "n": 16,
+    "title": "Dos cuentas congeladas",
+    "topic": "4.2 deadlock y orden global",
+    "expected": "Ambas transferencias finalizan dentro del plazo; saldo agregado constante.",
+    "kind": "Puede bloquearse; límite de espera",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c16/Caso16.java",
+    "main": "psp.ud2.c16.Caso16"
+  },
+  {
+    "n": 17,
+    "title": "Dos personas demasiado amables",
+    "topic": "4.3 livelock",
+    "expected": "Las dos personas completan sus tareas antes de 100 intentos.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c17/Caso17.java",
+    "main": "psp.ud2.c17.Caso17"
+  },
+  {
+    "n": 18,
+    "title": "La llave que nunca vuelve",
+    "topic": "4.4 ReentrantLock, unlock(), finally",
+    "expected": "Después de la primera operación, otra tarea puede adquirir el bloqueo.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c18/Caso18.java",
+    "main": "psp.ud2.c18.Caso18"
+  },
+  {
+    "n": 19,
+    "title": "Confundir estados de ejecución",
+    "topic": "4.5 Thread.State",
+    "expected": "Durante sleep el hilo se observa TIMED_WAITING, no RUNNABLE permanentemente.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c19/Caso19.java",
+    "main": "psp.ud2.c19.Caso19"
+  },
+  {
+    "n": 20,
+    "title": "Consumidores que reciben null",
+    "topic": "5.1 wait() y condición while",
+    "expected": "Dos consumidores reciben dos mensajes distintos; ninguno recibe null.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c20/Caso20.java",
+    "main": "psp.ud2.c20.Caso20"
+  },
+  {
+    "n": 21,
+    "title": "Aviso a un interlocutor equivocado",
+    "topic": "5.1 notify() frente a notifyAll()",
+    "expected": "Todos los productores y consumidores terminan y se procesa el total.",
+    "kind": "Intermitente / bloqueo posible",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c21/Caso21.java",
+    "main": "psp.ud2.c21.Caso21"
+  },
+  {
+    "n": 22,
+    "title": "Cola que pierde trabajos sin avisar",
+    "topic": "5.2 BlockingQueue, put y offer",
+    "expected": "Los 30 trabajos se procesan sin perder ninguno.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c22/Caso22.java",
+    "main": "psp.ud2.c22.Caso22"
+  },
+  {
+    "n": 23,
+    "title": "Un mapa concurrente, operaciones no concurrentes",
+    "topic": "5.3 ConcurrentHashMap y read-modify-write",
+    "expected": "El total de visitas debe ser 400.000.",
+    "kind": "Intermitente",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c23/Caso23.java",
+    "main": "psp.ud2.c23.Caso23"
+  },
+  {
+    "n": 24,
+    "title": "Inventario reemplazado en lugar de acumulado",
+    "topic": "5.4 merge() y compute()",
+    "expected": "Tras tres entregas de 4 cajas deben figurar 12 cajas.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c24/Caso24.java",
+    "main": "psp.ud2.c24.Caso24"
+  },
+  {
+    "n": 25,
+    "title": "Cerrar el turno echando al personal",
+    "topic": "6.1-6.2 ExecutorService, shutdown",
+    "expected": "Se completan los 20 trabajos enviados.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c25/Caso25.java",
+    "main": "psp.ud2.c25.Caso25"
+  },
+  {
+    "n": 26,
+    "title": "Resultados descartados por anticipación",
+    "topic": "7 Callable y Future",
+    "expected": "Las 8 tareas devuelven cada una 100; el total es 800.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c26/Caso26.java",
+    "main": "psp.ud2.c26.Caso26"
+  },
+  {
+    "n": 27,
+    "title": "Mil hilos virtuales en una ventanilla",
+    "topic": "8 Virtual threads (Java 21+)",
+    "expected": "Las 40 esperas independientes tardan mucho menos de 1.200 ms en conjunto.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c27/Caso27.java",
+    "main": "psp.ud2.c27.Caso27"
+  },
+  {
+    "n": 28,
+    "title": "Una cadena asíncrona abandonada",
+    "topic": "9 CompletableFuture y encadenamiento",
+    "expected": "La cadena completa termina antes de declarar el resultado final.",
+    "kind": "Semántico",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c28/Caso28.java",
+    "main": "psp.ud2.c28.Caso28"
+  },
+  {
+    "n": 29,
+    "title": "Auditoría final: centro de reparto",
+    "topic": "10 Elección de mecanismos / integración",
+    "expected": "Cada uno de los 60 envíos se procesa; cada zona acumula exactamente 20; el cierre es ordenado.",
+    "kind": "Integración (varios defectos)",
+    "challenge": "Explica por qué el resultado puede ser incorrecto, corrige el diseño y prueba el caso.",
+    "path": "src/main/java/psp/ud2/c29/Caso29.java",
+    "main": "psp.ud2.c29.Caso29"
+  }
+]

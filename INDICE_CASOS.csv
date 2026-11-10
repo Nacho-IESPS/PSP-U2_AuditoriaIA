@@ -1,0 +1,30 @@
+numero;titulo;apartado_v10;tipo;clase
+1;El hilo fantasma;1.1 Thread, run(), start();Semántico;psp.ud2.c01.Caso01
+2;Dos tareas, un solo hilo;1.2 Runnable, lambda;Semántico;psp.ud2.c02.Caso02
+3;Cancelar no es detener a la fuerza;2.1 interrupt(), isInterrupted();Semántico;psp.ud2.c03.Caso03
+4;La cancelación olvidada;2.2 InterruptedException;Semántico;psp.ud2.c04.Caso04
+5;Operación cancelada que dice OK;2.3 throw, throws, propagar;Semántico;psp.ud2.c05.Caso05
+6;Un cronómetro que engaña;2.4 nanoTime() y join();Semántico;psp.ud2.c06.Caso06
+7;Contador que pierde pedidos;3.1 race condition, ++;Intermitente;psp.ud2.c07.Caso07
+8;Pedido congelado que cambia;3.2 record e inmutabilidad;Semántico;psp.ud2.c08.Caso08
+9;El letrero invisible;3.3 visibilidad, volatile;Intermitente / dependiente de JVM;psp.ud2.c09.Caso09
+10;Volatile no vuelve atómico el contador;3.3 volatile frente a atomicidad;Intermitente;psp.ud2.c10.Caso10
+11;AtomicInteger con una operación no atómica;3.4 AtomicInteger;Intermitente;psp.ud2.c11.Caso11
+12;Saldo bancario negativo;3.4 CAS y operaciones condicionales;Semántico;psp.ud2.c12.Caso12
+13;Estadísticas usadas como semáforo;3.5 LongAdder y contención;Semántico;psp.ud2.c13.Caso13
+14;La cerradura que no protege;4.1 synchronized y monitor compartido;Intermitente;psp.ud2.c14.Caso14
+15;Una transferencia partida;4.1 sección crítica e invariantes;Intermitente;psp.ud2.c15.Caso15
+16;Dos cuentas congeladas;4.2 deadlock y orden global;Puede bloquearse; límite de espera;psp.ud2.c16.Caso16
+17;Dos personas demasiado amables;4.3 livelock;Semántico;psp.ud2.c17.Caso17
+18;La llave que nunca vuelve;4.4 ReentrantLock, unlock(), finally;Semántico;psp.ud2.c18.Caso18
+19;Confundir estados de ejecución;4.5 Thread.State;Semántico;psp.ud2.c19.Caso19
+20;Consumidores que reciben null;5.1 wait() y condición while;Semántico;psp.ud2.c20.Caso20
+21;Aviso a un interlocutor equivocado;5.1 notify() frente a notifyAll();Intermitente / bloqueo posible;psp.ud2.c21.Caso21
+22;Cola que pierde trabajos sin avisar;5.2 BlockingQueue, put y offer;Semántico;psp.ud2.c22.Caso22
+23;Un mapa concurrente, operaciones no concurrentes;5.3 ConcurrentHashMap y read-modify-write;Intermitente;psp.ud2.c23.Caso23
+24;Inventario reemplazado en lugar de acumulado;5.4 merge() y compute();Semántico;psp.ud2.c24.Caso24
+25;Cerrar el turno echando al personal;6.1-6.2 ExecutorService, shutdown;Semántico;psp.ud2.c25.Caso25
+26;Resultados descartados por anticipación;7 Callable y Future;Semántico;psp.ud2.c26.Caso26
+27;Mil hilos virtuales en una ventanilla;8 Virtual threads (Java 21+);Semántico;psp.ud2.c27.Caso27
+28;Una cadena asíncrona abandonada;9 CompletableFuture y encadenamiento;Semántico;psp.ud2.c28.Caso28
+29;Auditoría final: centro de reparto;10 Elección de mecanismos / integración;Integración (varios defectos);psp.ud2.c29.Caso29
